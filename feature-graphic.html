@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stattpad — Feature Graphic 1024×500</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1024px; height: 500px; overflow: hidden; background: #000; }
+
+    .canvas {
+      width: 1024px;
+      height: 500px;
+      background: #0A0A0A;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    /* Background geometric shapes */
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.12;
+    }
+    .shape-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, #D42B2B 0%, transparent 70%);
+      top: -150px; right: -100px;
+    }
+    .shape-2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, #D42B2B 0%, transparent 70%);
+      bottom: -200px; left: -80px;
+      opacity: 0.07;
+    }
+
+    /* Grid lines for sporty feel */
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Red accent bar on the left */
+    .accent-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: #D42B2B;
+    }
+
+    /* Diagonal slash accent */
+    .slash {
+      position: absolute;
+      right: 180px;
+      top: -40px;
+      width: 3px;
+      height: 580px;
+      background: linear-gradient(to bottom, transparent, rgba(212, 43, 43, 0.3), transparent);
+      transform: rotate(15deg);
+    }
+    .slash-2 {
+      right: 220px;
+      opacity: 0.4;
+    }
+
+    /* Main content */
+    .content {
+      position: relative;
+      z-index: 10;
+      text-align: left;
+      padding-left: 80px;
+      padding-right: 60px;
+      width: 100%;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #D42B2B;
+      margin-bottom: 18px;
+    }
+
+    .logo {
+      font-size: 88px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .logo span {
+      color: #D42B2B;
+    }
+
+    .tagline {
+      font-size: 22px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.2px;
+      max-width: 440px;
+      line-height: 1.4;
+    }
+
+    /* Right side: stat pills */
+    .stats {
+      position: absolute;
+      right: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 10;
+    }
+    .stat-pill {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      backdrop-filter: blur(4px);
+      min-width: 200px;
+    }
+    .stat-icon {
+      width: 36px;
+      height: 36px;
+      background: #D42B2B;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .stat-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .stat-value {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="grid"></div>
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="slash"></div>
+    <div class="slash slash-2"></div>
+    <div class="accent-bar"></div>
+
+    <div class="content">
+      <div class="eyebrow">Sports Performance Platform</div>
+      <div class="logo">Statt<span>pad</span></div>
+      <div class="tagline">Track training, log matches &amp; build your sports story</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-pill">
+        <div class="stat-icon">⚽</div>
+        <div class="stat-text">
+          <span class="stat-label">Match Logging</span>
+          <span class="stat-value">Goals &amp; Assists</span>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-icon">📋</div>
+        <div class="stat-text">
+          <span class="stat-label">Training Sessions</span>
+          <span class="stat-value">Attendance &amp; Ratings</span>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-icon">🏅</div>
+        <div class="stat-text">
+          <span class="stat-label">Coach Endorsements</span>
+          <span class="stat-value">Verified Feedback</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

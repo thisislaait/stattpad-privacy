@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stattpad — App Icon 512×512</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 512px; height: 512px; overflow: hidden; background: #000; }
+
+    .icon {
+      width: 512px;
+      height: 512px;
+      background: #0A0A0A;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    /* Background glow */
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212,43,43,0.25) 0%, transparent 65%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Subtle grid */
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Red corner accent */
+    .corner {
+      position: absolute;
+      top: 0; left: 0;
+      width: 10px;
+      height: 100%;
+      background: #D42B2B;
+    }
+
+    /* S monogram */
+    .content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding-left: 10px;
+    }
+
+    .letter {
+      font-size: 260px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -8px;
+      background: linear-gradient(160deg, #FFFFFF 0%, rgba(255,255,255,0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+    }
+
+    .wordmark {
+      font-size: 52px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      margin-top: -10px;
+    }
+
+    /* Red dot accent under the S */
+    .dot {
+      width: 18px;
+      height: 18px;
+      background: #D42B2B;
+      border-radius: 50%;
+      margin: 8px auto 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="icon">
+    <div class="grid"></div>
+    <div class="glow"></div>
+    <div class="corner"></div>
+    <div class="content">
+      <span class="letter">S</span>
+      <div class="wordmark">tattpad</div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</body>
+</html>
